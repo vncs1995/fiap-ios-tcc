@@ -7,25 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8848A52F25C799220061E4A9 /* State+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8848A52B25C799220061E4A9 /* State+CoreDataClass.swift */; };
+		8848A53025C799220061E4A9 /* State+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8848A52C25C799220061E4A9 /* State+CoreDataProperties.swift */; };
+		8848A53125C799220061E4A9 /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8848A52D25C799220061E4A9 /* Product+CoreDataClass.swift */; };
+		8848A53225C799220061E4A9 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8848A52E25C799220061E4A9 /* Product+CoreDataProperties.swift */; };
+		8874B53B25C77E3300FB9552 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8874B53A25C77E3300FB9552 /* TabBarViewController.swift */; };
+		8874B53E25C783C800FB9552 /* TotalPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8874B53D25C783C800FB9552 /* TotalPurchaseViewController.swift */; };
 		8889F57D25C6ECED0023815D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8889F57C25C6ECED0023815D /* AppDelegate.swift */; };
 		8889F57F25C6ECED0023815D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8889F57E25C6ECED0023815D /* SceneDelegate.swift */; };
-		8889F58125C6ECED0023815D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8889F58025C6ECED0023815D /* ViewController.swift */; };
 		8889F58425C6ECED0023815D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8889F58225C6ECED0023815D /* Main.storyboard */; };
 		8889F58725C6ECED0023815D /* Vinicius.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8889F58525C6ECED0023815D /* Vinicius.xcdatamodeld */; };
 		8889F58925C6ECEF0023815D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8889F58825C6ECEF0023815D /* Assets.xcassets */; };
 		8889F58C25C6ECEF0023815D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8889F58A25C6ECEF0023815D /* LaunchScreen.storyboard */; };
+		88B85B1A25C72AD600374106 /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B85B1925C72AD600374106 /* ProductsTableViewController.swift */; };
+		88B85B1E25C74F3C00374106 /* RegisterProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B85B1D25C74F3C00374106 /* RegisterProductViewController.swift */; };
+		88B85B2325C74FB700374106 /* RegisterStatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B85B2225C74FB700374106 /* RegisterStatesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8848A52B25C799220061E4A9 /* State+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "State+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		8848A52C25C799220061E4A9 /* State+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "State+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		8848A52D25C799220061E4A9 /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		8848A52E25C799220061E4A9 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		8874B53A25C77E3300FB9552 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		8874B53D25C783C800FB9552 /* TotalPurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalPurchaseViewController.swift; sourceTree = "<group>"; };
 		8889F57925C6ECED0023815D /* Vinicius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vinicius.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8889F57C25C6ECED0023815D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8889F57E25C6ECED0023815D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8889F58025C6ECED0023815D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8889F58325C6ECED0023815D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8889F58625C6ECED0023815D /* Vinicius.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Vinicius.xcdatamodel; sourceTree = "<group>"; };
 		8889F58825C6ECEF0023815D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8889F58B25C6ECEF0023815D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8889F58D25C6ECEF0023815D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88B85B1925C72AD600374106 /* ProductsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
+		88B85B1D25C74F3C00374106 /* RegisterProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProductViewController.swift; sourceTree = "<group>"; };
+		88B85B2225C74FB700374106 /* RegisterStatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterStatesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +74,32 @@
 		8889F57B25C6ECED0023815D /* Vinicius */ = {
 			isa = PBXGroup;
 			children = (
+				88B85B2E25C76A4700374106 /* CoreData */,
 				8889F57C25C6ECED0023815D /* AppDelegate.swift */,
 				8889F57E25C6ECED0023815D /* SceneDelegate.swift */,
-				8889F58025C6ECED0023815D /* ViewController.swift */,
+				88B85B1925C72AD600374106 /* ProductsTableViewController.swift */,
+				88B85B1D25C74F3C00374106 /* RegisterProductViewController.swift */,
+				88B85B2225C74FB700374106 /* RegisterStatesViewController.swift */,
+				8874B53D25C783C800FB9552 /* TotalPurchaseViewController.swift */,
 				8889F58225C6ECED0023815D /* Main.storyboard */,
 				8889F58825C6ECEF0023815D /* Assets.xcassets */,
 				8889F58A25C6ECEF0023815D /* LaunchScreen.storyboard */,
 				8889F58D25C6ECEF0023815D /* Info.plist */,
 				8889F58525C6ECED0023815D /* Vinicius.xcdatamodeld */,
+				8874B53A25C77E3300FB9552 /* TabBarViewController.swift */,
 			);
 			path = Vinicius;
+			sourceTree = "<group>";
+		};
+		88B85B2E25C76A4700374106 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				8848A52B25C799220061E4A9 /* State+CoreDataClass.swift */,
+				8848A52C25C799220061E4A9 /* State+CoreDataProperties.swift */,
+				8848A52D25C799220061E4A9 /* Product+CoreDataClass.swift */,
+				8848A52E25C799220061E4A9 /* Product+CoreDataProperties.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,10 +172,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8889F58125C6ECED0023815D /* ViewController.swift in Sources */,
 				8889F57D25C6ECED0023815D /* AppDelegate.swift in Sources */,
+				8848A53025C799220061E4A9 /* State+CoreDataProperties.swift in Sources */,
+				8848A53225C799220061E4A9 /* Product+CoreDataProperties.swift in Sources */,
+				8874B53E25C783C800FB9552 /* TotalPurchaseViewController.swift in Sources */,
+				8874B53B25C77E3300FB9552 /* TabBarViewController.swift in Sources */,
+				88B85B1A25C72AD600374106 /* ProductsTableViewController.swift in Sources */,
+				8848A53125C799220061E4A9 /* Product+CoreDataClass.swift in Sources */,
+				8848A52F25C799220061E4A9 /* State+CoreDataClass.swift in Sources */,
 				8889F57F25C6ECED0023815D /* SceneDelegate.swift in Sources */,
+				88B85B2325C74FB700374106 /* RegisterStatesViewController.swift in Sources */,
 				8889F58725C6ECED0023815D /* Vinicius.xcdatamodeld in Sources */,
+				88B85B1E25C74F3C00374106 /* RegisterProductViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
