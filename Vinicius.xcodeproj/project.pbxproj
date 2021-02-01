@@ -11,6 +11,10 @@
 		8848A53025C799220061E4A9 /* State+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8848A52C25C799220061E4A9 /* State+CoreDataProperties.swift */; };
 		8848A53125C799220061E4A9 /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8848A52D25C799220061E4A9 /* Product+CoreDataClass.swift */; };
 		8848A53225C799220061E4A9 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8848A52E25C799220061E4A9 /* Product+CoreDataProperties.swift */; };
+		8848A54025C7AD020061E4A9 /* StatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8848A53E25C7AD020061E4A9 /* StatesTableViewCell.swift */; };
+		8848A54125C7AD020061E4A9 /* StatesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8848A53F25C7AD020061E4A9 /* StatesTableViewCell.xib */; };
+		8848A54625C7AD260061E4A9 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8848A54425C7AD260061E4A9 /* ProductTableViewCell.swift */; };
+		8848A54725C7AD260061E4A9 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8848A54525C7AD260061E4A9 /* ProductTableViewCell.xib */; };
 		8874B53B25C77E3300FB9552 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8874B53A25C77E3300FB9552 /* TabBarViewController.swift */; };
 		8874B53E25C783C800FB9552 /* TotalPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8874B53D25C783C800FB9552 /* TotalPurchaseViewController.swift */; };
 		8889F57D25C6ECED0023815D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8889F57C25C6ECED0023815D /* AppDelegate.swift */; };
@@ -29,6 +33,10 @@
 		8848A52C25C799220061E4A9 /* State+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "State+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		8848A52D25C799220061E4A9 /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		8848A52E25C799220061E4A9 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		8848A53E25C7AD020061E4A9 /* StatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesTableViewCell.swift; sourceTree = "<group>"; };
+		8848A53F25C7AD020061E4A9 /* StatesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatesTableViewCell.xib; sourceTree = "<group>"; };
+		8848A54425C7AD260061E4A9 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		8848A54525C7AD260061E4A9 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
 		8874B53A25C77E3300FB9552 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		8874B53D25C783C800FB9552 /* TotalPurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalPurchaseViewController.swift; sourceTree = "<group>"; };
 		8889F57925C6ECED0023815D /* Vinicius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vinicius.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +63,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8848A53525C7AC830061E4A9 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				8848A53E25C7AD020061E4A9 /* StatesTableViewCell.swift */,
+				8848A53F25C7AD020061E4A9 /* StatesTableViewCell.xib */,
+				8848A54425C7AD260061E4A9 /* ProductTableViewCell.swift */,
+				8848A54525C7AD260061E4A9 /* ProductTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		8889F57025C6ECED0023815D = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +93,7 @@
 		8889F57B25C6ECED0023815D /* Vinicius */ = {
 			isa = PBXGroup;
 			children = (
+				8848A53525C7AC830061E4A9 /* TableViewCell */,
 				88B85B2E25C76A4700374106 /* CoreData */,
 				8889F57C25C6ECED0023815D /* AppDelegate.swift */,
 				8889F57E25C6ECED0023815D /* SceneDelegate.swift */,
@@ -161,7 +181,9 @@
 			files = (
 				8889F58C25C6ECEF0023815D /* LaunchScreen.storyboard in Resources */,
 				8889F58925C6ECEF0023815D /* Assets.xcassets in Resources */,
+				8848A54725C7AD260061E4A9 /* ProductTableViewCell.xib in Resources */,
 				8889F58425C6ECED0023815D /* Main.storyboard in Resources */,
+				8848A54125C7AD020061E4A9 /* StatesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8889F57D25C6ECED0023815D /* AppDelegate.swift in Sources */,
+				8848A54025C7AD020061E4A9 /* StatesTableViewCell.swift in Sources */,
 				8848A53025C799220061E4A9 /* State+CoreDataProperties.swift in Sources */,
 				8848A53225C799220061E4A9 /* Product+CoreDataProperties.swift in Sources */,
 				8874B53E25C783C800FB9552 /* TotalPurchaseViewController.swift in Sources */,
@@ -180,6 +203,7 @@
 				88B85B1A25C72AD600374106 /* ProductsTableViewController.swift in Sources */,
 				8848A53125C799220061E4A9 /* Product+CoreDataClass.swift in Sources */,
 				8848A52F25C799220061E4A9 /* State+CoreDataClass.swift in Sources */,
+				8848A54625C7AD260061E4A9 /* ProductTableViewCell.swift in Sources */,
 				8889F57F25C6ECED0023815D /* SceneDelegate.swift in Sources */,
 				88B85B2325C74FB700374106 /* RegisterStatesViewController.swift in Sources */,
 				8889F58725C6ECED0023815D /* Vinicius.xcdatamodeld in Sources */,
