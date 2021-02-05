@@ -22,7 +22,7 @@ class StatesTableViewCell: UITableViewCell {
         
     }
     
-    func configure(with _title: String, _subTitle: String) {
+    func configure(_title: String, _subTitle: String) {
         title.text = _title
         subTitle.text = _subTitle
     }

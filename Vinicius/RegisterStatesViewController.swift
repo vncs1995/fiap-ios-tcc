@@ -21,7 +21,7 @@ class RegisterStatesViewController: UIViewController, UITableViewDataSource {
 
         // Do any additional setup after loading the view.
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "States")
+        tableView.register(StatesTableViewCell.nib(), forCellReuseIdentifier: StatesTableViewCell.identifier)
         tableView.dataSource = self
         getAllStates()
     }
@@ -94,11 +94,11 @@ class RegisterStatesViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "States", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: StatesTableViewCell.identifier, for: indexPath) as! StatesTableViewCell
 
         // Configure the cell...
-        cell.textLabel?.text = states[indexPath.row].name
-        cell.detailTextLabel?.text = String(states[indexPath.row].tax)
+        cell.configure(_title: states[indexPath.row].name!, _subTitle: String(states[indexPath.row].tax))
+        
         return cell
     }
     

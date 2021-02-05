@@ -11,7 +11,6 @@ import CoreData
 class ProductsTableViewController: UITableViewController {
 
     var products: [Product] = []
-    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     
@@ -23,6 +22,8 @@ class ProductsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        tableView.register(ProductTableViewCell.nib(), forCellReuseIdentifier: ProductTableViewCell.identifier)
+
     }
     
     
@@ -54,10 +55,11 @@ class ProductsTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Products", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: ProductTableViewCell.identifier, for: indexPath)as! ProductTableViewCell
 
         // Configure the cell...
-        cell.textLabel?.text = products[indexPath.row].name
+        cell.configureProduct(with: products[indexPath.row])
+        cell.delegate = self
         return cell
     }
     
@@ -97,14 +99,24 @@ class ProductsTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//         Get the new view controller using segue.destination.
+//         Pass the selected object to the new view controller.
+    
+//    }
+}
+
+extension ProductsTableViewController: ProductTableViewCellDelegate {
+    func didTapCell(with product: Product) {
+        print(product.name)
+        
+        let viewController = storyboard?.instantiateViewController(withIdentifier: "RegisterProduct") as! RegisterProductViewController
+    
+        viewController.productFromList = product
+        navigationController?.pushViewController(viewController, animated: true)
     }
-    */
 
 }
