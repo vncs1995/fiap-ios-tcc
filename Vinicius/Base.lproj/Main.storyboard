@@ -120,6 +120,7 @@
                         <outlet property="productPhoto" destination="VeX-NP-Uos" id="9NJ-n3-YoO"/>
                         <outlet property="productState" destination="6F4-FG-ckm" id="hE1-Zk-N6V"/>
                         <outlet property="productValue" destination="TFv-sH-lcc" id="yka-83-s1W"/>
+                        <outlet property="submitButton" destination="kZh-Wd-7kF" id="csg-C5-J6n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Isy-Qm-KQG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

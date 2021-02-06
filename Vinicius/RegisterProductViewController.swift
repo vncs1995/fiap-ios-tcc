@@ -15,6 +15,7 @@ class RegisterProductViewController: UIViewController {
     @IBOutlet weak var productPhoto: UIButton!
     @IBOutlet weak var productValue: UITextField!
     @IBOutlet weak var productState: UITextField!
+    @IBOutlet weak var submitButton: UIButton!
     var pickerView = UIPickerView()
     var states: [State] = []
     var selectedState: State?
@@ -24,11 +25,15 @@ class RegisterProductViewController: UIViewController {
         super.viewDidLoad()
 
         print()
-        if(productFromList != nil) {
-            productName.text = productFromList?.name
-//            productPhoto.setImage(productFromList?.photo, for: .normal)
-//            productValue.text = String(productFromList?.price!)!
-            productState.text = productFromList?.state?.name
+        
+        if let productFromList = productFromList {
+            submitButton.setTitle("Atualizar", for: .normal)
+            productName.text = productFromList.name
+            if let photo = productFromList.photo {
+                productPhoto.setImage(UIImage(data: photo), for: .normal)
+            }
+            productValue.text = String(productFromList.price)
+            productState.text = productFromList.state?.name
         } else {
             pickerView.delegate = self
             pickerView.dataSource = self
