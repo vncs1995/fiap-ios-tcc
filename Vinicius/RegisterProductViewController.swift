@@ -23,11 +23,9 @@ class RegisterProductViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        print()
         
         if let productFromList = productFromList {
-            submitButton.setTitle("Atualizar", for: .normal)
+//            submitButton.setTitle("Atualizar", for: .normal)
             productName.text = productFromList.name
             if let photo = productFromList.photo {
                 productPhoto.setImage(UIImage(data: photo), for: .normal)

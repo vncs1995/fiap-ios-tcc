@@ -47,7 +47,7 @@
         <!--Cadastrar Produto-->
         <scene sceneID="kGu-14-NJT">
             <objects>
-                <viewController storyboardIdentifier="RegisterProduct" id="TDs-9O-Cno" customClass="RegisterProductViewController" customModule="Vinicius" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterProduct" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TDs-9O-Cno" customClass="RegisterProductViewController" customModule="Vinicius" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N6c-SP-uW7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,7 +120,6 @@
                         <outlet property="productPhoto" destination="VeX-NP-Uos" id="9NJ-n3-YoO"/>
                         <outlet property="productState" destination="6F4-FG-ckm" id="hE1-Zk-N6V"/>
                         <outlet property="productValue" destination="TFv-sH-lcc" id="yka-83-s1W"/>
-                        <outlet property="submitButton" destination="kZh-Wd-7kF" id="csg-C5-J6n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Isy-Qm-KQG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -130,7 +129,7 @@
         <!--Register States View Controller-->
         <scene sceneID="g1U-tA-hmu">
             <objects>
-                <viewController storyboardIdentifier="RegisterStates" modalPresentationStyle="fullScreen" id="VnO-Tm-53B" customClass="RegisterStatesViewController" customModule="Vinicius" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VnO-Tm-53B" customClass="RegisterStatesViewController" customModule="Vinicius" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cDc-2Y-Lur">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -169,7 +168,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gf4-EA-gXR">
-                                <rect key="frame" x="20" y="219" width="374" height="363"/>
+                                <rect key="frame" x="0.0" y="219" width="394" height="363"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>

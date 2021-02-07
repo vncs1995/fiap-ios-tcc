@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class RegisterStatesViewController: UIViewController, UITableViewDataSource {
+class RegisterStatesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -22,6 +22,7 @@ class RegisterStatesViewController: UIViewController, UITableViewDataSource {
         // Do any additional setup after loading the view.
         
         tableView.register(StatesTableViewCell.nib(), forCellReuseIdentifier: StatesTableViewCell.identifier)
+        tableView.delegate = self
         tableView.dataSource = self
         getAllStates()
     }
@@ -79,6 +80,17 @@ class RegisterStatesViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let delete = UIContextualAction(style: .destructive, title: "Deletar", handler: {(action, view, completionHandler) in
+            let state = self.states[indexPath.row]
+            self.states.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+
+            self.context.delete(state)
+            do {
+                    try self.context.save()
+            } catch {
+                print("Erro ao deletar o estado")
+            }
+            
             completionHandler(true)
         })
         
@@ -101,10 +113,8 @@ class RegisterStatesViewController: UIViewController, UITableViewDataSource {
         
         return cell
     }
-    
 
     
-
     /*
     // MARK: - Navigation
 

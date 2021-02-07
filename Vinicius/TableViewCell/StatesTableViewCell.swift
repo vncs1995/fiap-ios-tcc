@@ -18,10 +18,6 @@ class StatesTableViewCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var subTitle: UILabel!
     
-    @IBAction func didTapButton()  {
-        
-    }
-    
     func configure(_title: String, _subTitle: String) {
         title.text = _title
         subTitle.text = _subTitle
@@ -30,6 +26,4 @@ class StatesTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
-    
 }
