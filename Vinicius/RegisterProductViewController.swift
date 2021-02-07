@@ -15,6 +15,7 @@ class RegisterProductViewController: UIViewController {
     @IBOutlet weak var productPhoto: UIButton!
     @IBOutlet weak var productValue: UITextField!
     @IBOutlet weak var productState: UITextField!
+    @IBOutlet weak var productCreditCard: UISwitch!
     @IBOutlet weak var submitButton: UIButton!
     var pickerView = UIPickerView()
     var states: [State] = []
@@ -31,6 +32,7 @@ class RegisterProductViewController: UIViewController {
             }
             productValue.text = String(productFromList.price)
             productState.text = productFromList.state?.name
+            productCreditCard.setOn(productFromList.creditCard, animated: true)
             submitButton.setTitle("Atualizar", for: .normal)
         }
         pickerView.delegate = self
@@ -46,17 +48,19 @@ class RegisterProductViewController: UIViewController {
 
     
     @IBAction func registerProduct(_ sender: Any) {
-        if let selectedProduct = productFromList {
-            selectedProduct.name = productName.text
-            selectedProduct.price = Float(productValue.text!)!
-            selectedProduct.photo = productPhoto.image(for: .normal)!.pngData()
-            selectedProduct.state = selectedState
+        if let updateProduct = productFromList {
+            updateProduct.name = productName.text
+            updateProduct.price = Float(productValue.text!)!
+            updateProduct.photo = productPhoto.image(for: .normal)!.pngData()
+            updateProduct.state = selectedState
+            updateProduct.creditCard = productCreditCard.isOn
         } else {
             let newItem = Product(context: context)
             newItem.name = productName.text
             newItem.price = Float(productValue.text!)!
             newItem.photo = productPhoto.image(for: .normal)!.pngData()
             newItem.state = selectedState
+            newItem.creditCard = productCreditCard.isOn
         }
         
         do{

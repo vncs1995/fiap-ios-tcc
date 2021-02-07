@@ -20,6 +20,7 @@ extension Product {
     @NSManaged public var photo: Data?
     @NSManaged public var price: Float
     @NSManaged public var state: State?
+    @NSManaged public var creditCard: Bool
 
 }
 

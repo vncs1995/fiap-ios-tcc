@@ -31,6 +31,11 @@ class RegisterStatesViewController: UIViewController, UITableViewDataSource, UIT
         do{
             states = try context.fetch(State.fetchRequest())
             tableView.reloadData()
+            if states.count == 0 {
+                self.tableView.setEmptyMessage("Lista de estados vazia.")
+            } else {
+                self.tableView.restore()
+            }
         } catch {
             print("Erro no tableView")
         }
@@ -99,6 +104,7 @@ class RegisterStatesViewController: UIViewController, UITableViewDataSource, UIT
 
                 self.context.delete(state)
                 try self.context.save()
+                self.getAllStates()
             } catch {
                 print("Erro ao deletar o estado")
             }

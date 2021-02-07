@@ -116,6 +116,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Cadastrar Produto" id="yvX-Rn-t1Z"/>
                     <connections>
+                        <outlet property="productCreditCard" destination="fU7-lW-rWa" id="uqJ-HP-uNM"/>
                         <outlet property="productName" destination="AkH-WY-2ml" id="2ML-6D-y0N"/>
                         <outlet property="productPhoto" destination="VeX-NP-Uos" id="9NJ-n3-YoO"/>
                         <outlet property="productState" destination="6F4-FG-ckm" id="hE1-Zk-N6V"/>
