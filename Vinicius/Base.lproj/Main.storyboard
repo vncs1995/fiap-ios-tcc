@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductTableViewCell" id="HOQ-UN-KYl">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Products" id="HOQ-UN-KYl">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HOQ-UN-KYl" id="Z4p-Mt-h4T">
@@ -120,6 +120,7 @@
                         <outlet property="productPhoto" destination="VeX-NP-Uos" id="9NJ-n3-YoO"/>
                         <outlet property="productState" destination="6F4-FG-ckm" id="hE1-Zk-N6V"/>
                         <outlet property="productValue" destination="TFv-sH-lcc" id="yka-83-s1W"/>
+                        <outlet property="submitButton" destination="kZh-Wd-7kF" id="at1-ze-HU3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Isy-Qm-KQG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -129,7 +130,7 @@
         <!--Register States View Controller-->
         <scene sceneID="g1U-tA-hmu">
             <objects>
-                <viewController id="VnO-Tm-53B" customClass="RegisterStatesViewController" customModule="Vinicius" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterStates" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VnO-Tm-53B" customClass="RegisterStatesViewController" customModule="Vinicius" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cDc-2Y-Lur">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

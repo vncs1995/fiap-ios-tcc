@@ -81,12 +81,24 @@ class RegisterStatesViewController: UIViewController, UITableViewDataSource, UIT
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let delete = UIContextualAction(style: .destructive, title: "Deletar", handler: {(action, view, completionHandler) in
             let state = self.states[indexPath.row]
-            self.states.remove(at: indexPath.row)
-                    tableView.deleteRows(at: [indexPath], with: .fade)
-
-            self.context.delete(state)
+            
             do {
-                    try self.context.save()
+                let objectsWithState = NSFetchRequest<NSFetchRequestResult>(entityName: "Product")
+                objectsWithState.predicate = NSPredicate(format: "state == %@", state)
+                
+                let productsToDelete = try self.context.fetch(objectsWithState)
+                
+                for object in productsToDelete
+                {
+                    let managedObject:NSManagedObject = object as! NSManagedObject
+                    self.context.delete(managedObject)
+                }
+                
+                self.states.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+
+                self.context.delete(state)
+                try self.context.save()
             } catch {
                 print("Erro ao deletar o estado")
             }
@@ -112,6 +124,41 @@ class RegisterStatesViewController: UIViewController, UITableViewDataSource, UIT
         cell.configure(_title: states[indexPath.row].name!, _subTitle: String(states[indexPath.row].tax))
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedState = states[indexPath.row]
+        let alertController = UIAlertController(title: "Estado selecionado", message: "", preferredStyle: .alert)
+        
+        alertController.addTextField { (textField) in
+            textField.text = selectedState.name
+        }
+        
+        alertController.addTextField { (textField) in
+            textField.text = String(selectedState.tax)
+        }
+        
+        let saveAction = UIAlertAction(title: "Atualizar", style: .default, handler: { alert -> Void in
+                if let nameField = alertController.textFields?[0], let taxField = alertController.textFields?[1] {
+                    if nameField.text!.count > 0 && taxField.text!.count > 0 {
+                        selectedState.name = nameField.text
+                        selectedState.tax = Float(taxField.text!)!
+                    }
+                }
+            
+            do{
+                try self.context.save()
+                self.getAllStates()
+            } catch {}
+        }
+        )
+        
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: {(action : UIAlertAction!) -> Void in })
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
 
     

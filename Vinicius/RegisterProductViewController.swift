@@ -25,28 +25,40 @@ class RegisterProductViewController: UIViewController {
         super.viewDidLoad()
         
         if let productFromList = productFromList {
-//            submitButton.setTitle("Atualizar", for: .normal)
             productName.text = productFromList.name
             if let photo = productFromList.photo {
                 productPhoto.setImage(UIImage(data: photo), for: .normal)
             }
             productValue.text = String(productFromList.price)
             productState.text = productFromList.state?.name
-        } else {
-            pickerView.delegate = self
-            pickerView.dataSource = self
-            productState.inputView = pickerView
-            // Do any additional setup after loading the view.
-            getAllStates()
+            submitButton.setTitle("Atualizar", for: .normal)
         }
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        productState.inputView = pickerView
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        getAllStates()
+    }
+
+    
     @IBAction func registerProduct(_ sender: Any) {
-        let newItem = Product(context: context)
-        newItem.name = productName.text
-        newItem.price = Float(productValue.text!)!
-        newItem.photo = productPhoto.image(for: .normal)!.pngData()
-        newItem.state = selectedState
+        if let selectedProduct = productFromList {
+            selectedProduct.name = productName.text
+            selectedProduct.price = Float(productValue.text!)!
+            selectedProduct.photo = productPhoto.image(for: .normal)!.pngData()
+            selectedProduct.state = selectedState
+        } else {
+            let newItem = Product(context: context)
+            newItem.name = productName.text
+            newItem.price = Float(productValue.text!)!
+            newItem.photo = productPhoto.image(for: .normal)!.pngData()
+            newItem.state = selectedState
+        }
+        
         do{
             try context.save()
             navigationController?.popViewController(animated: true)
