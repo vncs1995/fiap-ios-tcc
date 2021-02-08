@@ -40,11 +40,8 @@ class TotalPurchaseViewController: UIViewController {
                 productPrice += product.price * (product.state!.tax / 100)
                                 
                 if product.creditCard { productPrice += productPrice * (iof / 100) }
-                
-                print("currency \(productPrice) * \(productPrice * currency) =")
 
                 productPrice = productPrice * currency
-                print(productPrice)
                 
                 totalInRS += productPrice
             }

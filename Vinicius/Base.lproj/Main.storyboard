@@ -52,21 +52,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do Produto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AkH-WY-2ml">
-                                <rect key="frame" x="20" y="115" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do Produto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AkH-WY-2ml">
+                                <rect key="frame" x="20" y="118" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Estado da compra" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6F4-FG-ckm">
-                                <rect key="frame" x="20" y="390" width="327" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Estado da compra" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6F4-FG-ckm">
+                                <rect key="frame" x="20" y="475" width="341" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGo-vc-Ccu">
-                                <rect key="frame" x="355" y="387" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGo-vc-Ccu">
+                                <rect key="frame" x="369" y="480" width="25" height="24"/>
                                 <state key="normal" image="plus.circle" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                 </state>
@@ -74,34 +71,23 @@
                                     <action selector="navigateToRegisterState:" destination="TDs-9O-Cno" eventType="touchUpInside" id="bWf-KU-cEK"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Valor (U$)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TFv-sH-lcc">
-                                <rect key="frame" x="20" y="442" width="220" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Valor (U$)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TFv-sH-lcc">
+                                <rect key="frame" x="20" y="529" width="245" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fU7-lW-rWa">
-                                <rect key="frame" x="345" y="444" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fU7-lW-rWa">
+                                <rect key="frame" x="345" y="529" width="51" height="31"/>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cartão?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nm1-S7-vRa">
-                                <rect key="frame" x="270" y="449" width="60" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeX-NP-Uos">
-                                <rect key="frame" x="20" y="171" width="372" height="189"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeX-NP-Uos">
+                                <rect key="frame" x="20" y="172" width="374" height="283"/>
                                 <state key="normal" title="Button" image="ProductPhoto"/>
                                 <connections>
                                     <action selector="selectProductImage:" destination="TDs-9O-Cno" eventType="touchUpInside" id="35U-R8-Lbf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZh-Wd-7kF">
-                                <rect key="frame" x="139" y="533" width="136" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZh-Wd-7kF">
+                                <rect key="frame" x="20" y="623" width="374" height="30"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <state key="normal" title="CADASTRAR">
                                     <color key="titleColor" systemColor="systemGroupedBackgroundColor"/>
@@ -110,9 +96,38 @@
                                     <action selector="registerProduct:" destination="TDs-9O-Cno" eventType="touchUpInside" id="JFq-5y-9oS"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cartão?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nm1-S7-vRa">
+                                <rect key="frame" x="275" y="534" width="60" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LW8-27-Tr3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kZh-Wd-7kF" firstAttribute="top" secondItem="TFv-sH-lcc" secondAttribute="bottom" constant="60" id="9T7-t1-aDB"/>
+                            <constraint firstItem="VeX-NP-Uos" firstAttribute="top" secondItem="AkH-WY-2ml" secondAttribute="bottom" constant="20" id="Eqq-rh-Gz5"/>
+                            <constraint firstItem="6F4-FG-ckm" firstAttribute="centerY" secondItem="GGo-vc-Ccu" secondAttribute="centerY" id="Et3-Co-OUB"/>
+                            <constraint firstItem="LW8-27-Tr3" firstAttribute="trailing" secondItem="fU7-lW-rWa" secondAttribute="trailing" constant="20" id="Hd8-6C-7OB"/>
+                            <constraint firstItem="LW8-27-Tr3" firstAttribute="trailing" secondItem="VeX-NP-Uos" secondAttribute="trailing" constant="20" id="K22-CJ-ZeP"/>
+                            <constraint firstItem="TFv-sH-lcc" firstAttribute="top" secondItem="6F4-FG-ckm" secondAttribute="bottom" constant="20" id="Ned-je-7sL"/>
+                            <constraint firstItem="kZh-Wd-7kF" firstAttribute="leading" secondItem="LW8-27-Tr3" secondAttribute="leading" constant="20" id="O3x-Kc-iXh"/>
+                            <constraint firstItem="LW8-27-Tr3" firstAttribute="trailing" secondItem="GGo-vc-Ccu" secondAttribute="trailing" constant="20" id="OTh-IW-CyX"/>
+                            <constraint firstItem="AkH-WY-2ml" firstAttribute="leading" secondItem="LW8-27-Tr3" secondAttribute="leading" constant="20" id="Omb-ON-FPp"/>
+                            <constraint firstItem="fU7-lW-rWa" firstAttribute="top" secondItem="GGo-vc-Ccu" secondAttribute="bottom" constant="25" id="Pjo-cy-YCe"/>
+                            <constraint firstItem="6F4-FG-ckm" firstAttribute="leading" secondItem="LW8-27-Tr3" secondAttribute="leading" constant="20" id="SNJ-Vm-CGH"/>
+                            <constraint firstItem="Nm1-S7-vRa" firstAttribute="leading" secondItem="TFv-sH-lcc" secondAttribute="trailing" constant="10" id="SfW-m5-b0Y"/>
+                            <constraint firstItem="VeX-NP-Uos" firstAttribute="leading" secondItem="LW8-27-Tr3" secondAttribute="leading" constant="20" id="c9t-Gz-RFw"/>
+                            <constraint firstItem="AkH-WY-2ml" firstAttribute="top" secondItem="LW8-27-Tr3" secondAttribute="top" constant="30" id="dvX-Lj-rm8"/>
+                            <constraint firstItem="6F4-FG-ckm" firstAttribute="top" secondItem="VeX-NP-Uos" secondAttribute="bottom" constant="20" id="fUy-Zw-Ueu"/>
+                            <constraint firstItem="LW8-27-Tr3" firstAttribute="trailing" secondItem="AkH-WY-2ml" secondAttribute="trailing" constant="20" id="g4d-N1-MyM"/>
+                            <constraint firstItem="fU7-lW-rWa" firstAttribute="leading" secondItem="Nm1-S7-vRa" secondAttribute="trailing" constant="10" id="kG4-xG-VsX"/>
+                            <constraint firstItem="TFv-sH-lcc" firstAttribute="leading" secondItem="LW8-27-Tr3" secondAttribute="leading" constant="20" id="nZT-nO-kMP"/>
+                            <constraint firstItem="LW8-27-Tr3" firstAttribute="trailing" secondItem="kZh-Wd-7kF" secondAttribute="trailing" constant="20" id="nfO-DY-kCr"/>
+                            <constraint firstItem="GGo-vc-Ccu" firstAttribute="top" secondItem="VeX-NP-Uos" secondAttribute="bottom" constant="25" id="wuU-iT-9vC"/>
+                            <constraint firstItem="Nm1-S7-vRa" firstAttribute="top" secondItem="6F4-FG-ckm" secondAttribute="bottom" constant="25" id="zQZ-zc-mQV"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cadastrar Produto" id="yvX-Rn-t1Z"/>
                     <connections>
