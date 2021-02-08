@@ -15,6 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if UserDefaults.standard.object(forKey: "usd_currency") == nil {
+            UserDefaults.standard.set("5.34", forKey: "usd_currency") //Default in root.plist didn't work
+            UserDefaults.standard.set("6.38", forKey: "iof_preference") //Default in root.plist didn't work
+        }
         return true
     }
 

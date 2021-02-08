@@ -155,12 +155,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="saveCurrencyChange:" destination="VnO-Tm-53B" eventType="editingChanged" id="nOe-2a-Oyi"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="6.38" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HI3-gF-x7O">
                                 <rect key="frame" x="201" y="147" width="193" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="saveIofChange:" destination="VnO-Tm-53B" eventType="editingChanged" id="eah-We-z3L"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IOF (%):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0X-Wz-bSV">
                                 <rect key="frame" x="130" y="154" width="63" height="21"/>
@@ -188,7 +194,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="1lm-E9-Oxz"/>
                     <connections>
+                        <outlet property="iofValue" destination="HI3-gF-x7O" id="IzA-Eg-bHZ"/>
                         <outlet property="tableView" destination="gf4-EA-gXR" id="EDS-lb-HH8"/>
+                        <outlet property="usdCurrency" destination="yIz-ER-rI0" id="TfZ-a8-5td"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H7J-mV-waQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -198,35 +206,31 @@
         <!--Total da compra-->
         <scene sceneID="la7-sv-kui">
             <objects>
-                <viewController id="psO-7Z-65F" sceneMemberID="viewController">
+                <viewController id="psO-7Z-65F" customClass="TotalPurchaseViewController" customModule="Vinicius" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rDA-eC-zoe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total em U$:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKu-nK-hSG">
-                                <rect key="frame" x="159" y="119" width="97" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total em U$:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKu-nK-hSG">
+                                <rect key="frame" x="20" y="124" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total em R$:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fh7-VR-KFu">
-                                <rect key="frame" x="159" y="329" width="95" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total em R$:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fh7-VR-KFu">
+                                <rect key="frame" x="20" y="346" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1138.266" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVx-27-alV">
-                                <rect key="frame" x="136" y="148" width="142" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVx-27-alV">
+                                <rect key="frame" x="20" y="155" width="374" height="41"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <color key="textColor" systemColor="systemPinkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3642.4512" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWB-sP-cjf">
-                                <rect key="frame" x="123" y="358" width="167" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWB-sP-cjf">
+                                <rect key="frame" x="20" y="377" width="374" height="41"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
@@ -234,9 +238,27 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="g7s-eC-9jZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UVx-27-alV" firstAttribute="leading" secondItem="g7s-eC-9jZ" secondAttribute="leading" constant="20" id="6IC-KK-5Ni"/>
+                            <constraint firstItem="UVx-27-alV" firstAttribute="top" secondItem="qKu-nK-hSG" secondAttribute="bottom" constant="10" id="ASG-Le-oNf"/>
+                            <constraint firstItem="Fh7-VR-KFu" firstAttribute="top" secondItem="UVx-27-alV" secondAttribute="bottom" constant="150" id="JUD-Ap-lUf"/>
+                            <constraint firstItem="GWB-sP-cjf" firstAttribute="top" secondItem="Fh7-VR-KFu" secondAttribute="bottom" constant="10" id="XQh-30-VZz"/>
+                            <constraint firstItem="g7s-eC-9jZ" firstAttribute="trailing" secondItem="GWB-sP-cjf" secondAttribute="trailing" constant="20" id="YYt-I8-Xb3"/>
+                            <constraint firstItem="Fh7-VR-KFu" firstAttribute="leading" secondItem="g7s-eC-9jZ" secondAttribute="leading" constant="20" id="eJ5-1d-tnA"/>
+                            <constraint firstItem="GWB-sP-cjf" firstAttribute="leading" secondItem="g7s-eC-9jZ" secondAttribute="leading" constant="20" id="gax-2c-qjO"/>
+                            <constraint firstItem="g7s-eC-9jZ" firstAttribute="trailing" secondItem="Fh7-VR-KFu" secondAttribute="trailing" constant="20" id="ijc-ag-kh5"/>
+                            <constraint firstItem="qKu-nK-hSG" firstAttribute="top" secondItem="g7s-eC-9jZ" secondAttribute="top" constant="80" id="k5s-dP-444"/>
+                            <constraint firstItem="g7s-eC-9jZ" firstAttribute="trailing" secondItem="qKu-nK-hSG" secondAttribute="trailing" constant="20" id="mEn-fh-tPB"/>
+                            <constraint firstItem="qKu-nK-hSG" firstAttribute="leading" secondItem="g7s-eC-9jZ" secondAttribute="leading" constant="20" id="wq7-6z-I5l"/>
+                            <constraint firstItem="g7s-eC-9jZ" firstAttribute="trailing" secondItem="UVx-27-alV" secondAttribute="trailing" constant="20" id="xWq-pq-uTh"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Total da compra" image="briefcase.fill" catalog="system" id="piJ-zH-FeN"/>
                     <navigationItem key="navigationItem" id="8FP-2i-G2e"/>
+                    <connections>
+                        <outlet property="totalinRS" destination="GWB-sP-cjf" id="bLb-vH-IEi"/>
+                        <outlet property="totalinUS" destination="UVx-27-alV" id="tX1-Rr-Tyk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hTt-KQ-BKV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

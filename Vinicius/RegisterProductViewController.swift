@@ -111,7 +111,6 @@ class RegisterProductViewController: UIViewController {
 
 extension RegisterProductViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        print(info)
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerOriginalImage")] as? UIImage {
             productPhoto.setImage(image, for: .normal)
         }
@@ -142,3 +141,4 @@ extension RegisterProductViewController: UIPickerViewDelegate, UIPickerViewDataS
         productState.resignFirstResponder()
     }
 }
+

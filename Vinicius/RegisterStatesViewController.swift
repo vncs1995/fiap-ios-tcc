@@ -10,7 +10,12 @@ import CoreData
 
 class RegisterStatesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    var currency = UserDefaults.standard.float(forKey: "usd_currency")
+    var iof = UserDefaults.standard.float(forKey: "iof_preference")
+    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    @IBOutlet weak var usdCurrency: UITextField!
+    @IBOutlet weak var iofValue: UITextField!
     
     var states: [State] = []
 
@@ -18,8 +23,9 @@ class RegisterStatesViewController: UIViewController, UITableViewDataSource, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        usdCurrency.text = String(currency)
+        iofValue.text = String(iof)
         
         tableView.register(StatesTableViewCell.nib(), forCellReuseIdentifier: StatesTableViewCell.identifier)
         tableView.delegate = self
@@ -41,7 +47,14 @@ class RegisterStatesViewController: UIViewController, UITableViewDataSource, UIT
         }
     }
     
-
+    @IBAction func saveCurrencyChange(_ sender: Any) {
+        UserDefaults.standard.set(usdCurrency.text, forKey: "usd_currency")
+    }
+    
+    @IBAction func saveIofChange(_ sender: Any) {
+        UserDefaults.standard.set(iofValue.text, forKey: "iof_preference")
+    }
+    
     @IBAction func showAlertAddState(_ sender: Any) {
         let alertController = UIAlertController(title: "Adicionar Estado", message: "", preferredStyle: .alert)
         
