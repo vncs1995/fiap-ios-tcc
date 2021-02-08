@@ -81,6 +81,10 @@
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeX-NP-Uos">
                                 <rect key="frame" x="20" y="172" width="374" height="283"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="283" id="fQw-TT-pFP"/>
+                                    <constraint firstAttribute="width" constant="374" id="uSb-hZ-ULW"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="ProductPhoto"/>
                                 <connections>
                                     <action selector="selectProductImage:" destination="TDs-9O-Cno" eventType="touchUpInside" id="35U-R8-Lbf"/>
@@ -106,11 +110,12 @@
                         <viewLayoutGuide key="safeArea" id="LW8-27-Tr3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="kZh-Wd-7kF" firstAttribute="top" secondItem="TFv-sH-lcc" secondAttribute="bottom" constant="60" id="9T7-t1-aDB"/>
+                            <constraint firstItem="LW8-27-Tr3" firstAttribute="bottom" secondItem="kZh-Wd-7kF" secondAttribute="bottom" constant="160" id="1w9-Sy-OS3"/>
                             <constraint firstItem="VeX-NP-Uos" firstAttribute="top" secondItem="AkH-WY-2ml" secondAttribute="bottom" constant="20" id="Eqq-rh-Gz5"/>
                             <constraint firstItem="6F4-FG-ckm" firstAttribute="centerY" secondItem="GGo-vc-Ccu" secondAttribute="centerY" id="Et3-Co-OUB"/>
                             <constraint firstItem="LW8-27-Tr3" firstAttribute="trailing" secondItem="fU7-lW-rWa" secondAttribute="trailing" constant="20" id="Hd8-6C-7OB"/>
                             <constraint firstItem="LW8-27-Tr3" firstAttribute="trailing" secondItem="VeX-NP-Uos" secondAttribute="trailing" constant="20" id="K22-CJ-ZeP"/>
+                            <constraint firstItem="kZh-Wd-7kF" firstAttribute="top" secondItem="TFv-sH-lcc" secondAttribute="bottom" constant="60" id="Ms4-BX-l73"/>
                             <constraint firstItem="TFv-sH-lcc" firstAttribute="top" secondItem="6F4-FG-ckm" secondAttribute="bottom" constant="20" id="Ned-je-7sL"/>
                             <constraint firstItem="kZh-Wd-7kF" firstAttribute="leading" secondItem="LW8-27-Tr3" secondAttribute="leading" constant="20" id="O3x-Kc-iXh"/>
                             <constraint firstItem="LW8-27-Tr3" firstAttribute="trailing" secondItem="GGo-vc-Ccu" secondAttribute="trailing" constant="20" id="OTh-IW-CyX"/>
